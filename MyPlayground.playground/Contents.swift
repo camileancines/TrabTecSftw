@@ -2,45 +2,45 @@ import UIKit
 
 class MailTextViewController: UIViewController {
     
-    var emailBodyTextView: UITextView!
+    var emailContentTextView: UITextView!
     
-    func boldButtonAction(_ sender: UIButton) {
+    func setBoldTextButtonAction(_ sender: UIButton) {
         
-        let attributedText = NSMutableAttributedString(attributedString: emailBodyTextView.attributedText)
+        let attributedText = NSMutableAttributedString(attributedString: emailContentTextView.attributedText)
         
-        let font = UIFont.boldSystemFont(ofSize: 17)
+        let textFont = UIFont.boldSystemFont(ofSize: 17)
         
-        let attribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]
+        let setTextAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: textFont]
         
-        attributedText.addAttributes(attribute, range: emailBodyTextView.selectedRange)
+        attributedText.addAttributes(setTextAttribute, range: emailContentTextView.selectedRange)
         
-        emailBodyTextView.attributedText = attributedText
+        emailContentTextView.attributedText = attributedText
         
         
     }
     
-    func italicButtonAction(_ sender: UIButton) {
+    func setItalicTextButtonAction(_ sender: UIButton) {
         
-        let attributedText = NSMutableAttributedString(attributedString: emailBodyTextView.attributedText)
+        let attributedText = NSMutableAttributedString(attributedString: emailContentTextView.attributedText)
         
-        let font = UIFont.italicSystemFont(ofSize: 17)
+        let textFont = UIFont.italicSystemFont(ofSize: 17)
         
-        let attribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]
+        let setTextAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: textFont]
         
-        attributedText.addAttributes(attribute, range: emailBodyTextView.selectedRange)
+        attributedText.addAttributes(setTextAttribute, range: emailContentTextView.selectedRange)
         
-        emailBodyTextView.attributedText = attributedText
+        emailContentTextView.attributedText = attributedText
         
         
     }
     
-    func underlineButtonAction(_ sender: UIButton) {
+    func setUnderlineTextButtonAction(_ sender: UIButton) {
         
-        let attributedText = NSMutableAttributedString(attributedString: emailBodyTextView.attributedText)
+        let attributedText = NSMutableAttributedString(attributedString: emailContentTextView.attributedText)
         
-        attributedText.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: emailBodyTextView.selectedRange)
+        attributedText.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: emailContentTextView.selectedRange)
         
-        emailBodyTextView.attributedText = attributedText
+        emailContentTextView.attributedText = attributedText
         
     }
 }
